@@ -1,13 +1,14 @@
 import mongoose from "mongoose";
 
-const testSchema = new mongoose.Schema(
+const nameSchema = new mongoose.Schema(
   {
     name: {
       type: String,
       required: true,
-    },
+      trim: true
+    }
   },
   { timestamps: true }
 );
 
-export default mongoose.model("Test", testSchema);
+export default mongoose.model("Name", nameSchema);
